@@ -1,0 +1,97 @@
+/* リキッドレイアウト対応 */
+@use "global" as *;
+
+@if $startFrom == sp {
+  //スマホファースト
+  html {
+    //~375px
+    @media (max-width: 375px) {
+      font-size: vw(375, 16);
+    }
+
+    //375px~767px
+    font-size: 16px;
+
+    @include mq("md") {
+      font-size: vw($inner-pc + $padding-pc * 2, 16);
+    }
+
+    //inner~max-screen
+    @media (min-width: #{$inner-pc + $padding-pc * 2}px) {
+      font-size: 16px;
+    }
+  }
+} @else {
+  //PCファースト
+  html {
+    font-size: 16px;
+
+    @media (max-width: #{$inner-pc + $padding-pc * 2}px) {
+      font-size: vw($inner-pc + $padding-pc * 2, 16);
+    }
+
+    @include mq("md") {
+      font-size: 16px;
+    }
+
+    //~375px
+    @media (max-width: 375px) {
+      font-size: vw(375, 16);
+    }
+  }
+}
+
+/* pcの電話番号発信対応 */
+@if $startFrom == sp {
+  a[href^="tel:"] {
+    @include mq() {
+      pointer-events: none;
+    }
+  }
+} @else {
+  a[href^="tel:"] {
+    pointer-events: none;
+    @include mq() {
+      pointer-events: initial;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.3s;
+}
+
+/* フォーカスされている要素を明確に示 */
+a:focus-visible {
+  opacity: 0.7;
+}
+
+/* 入力デバイスのいずれかにhoverに対応している入力デバイスが含まれる場合に適用 */
+@media (any-hover: hover) {
+  a:active {
+    opacity: 0.7;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: rem(60);
+  @include mq() {
+    scroll-padding-top: rem(100);
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  font-family: $base-font-family;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+}

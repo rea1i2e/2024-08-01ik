@@ -1,0 +1,77 @@
+@use "global" as *;
+
+// .p-scroll {
+// }
+
+$scroll-height-sp: 43;
+$scroll-height: 86;
+
+.c-scroll {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: rem(5);
+  flex-direction: column-reverse;
+  line-height: 1;
+  @include mq() {
+    gap: rem(10);
+  }
+}
+
+.c-scroll::before {
+  display: block;
+  width: 1px;
+  height: rem($scroll-height-sp);
+  background-color: currentColor;
+  content: "";
+  @include mq() {
+    height: rem($scroll-height);
+  }
+}
+
+.c-scroll::after {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(rem($scroll-height-sp * -1));
+  display: block;
+  width: rem(4);
+  height: auto;
+  aspect-ratio: 1/ 1;
+  background-color: #2f4aa1;
+  border-radius: 50%;
+  content: "";
+  animation: scrollDownSp 3s ease-in-out infinite;
+  @include mq() {
+    animation: scrollDown 3s ease-in-out infinite;
+    width: rem(8);
+    transform: translateY(rem($scroll-height * -1));
+  }
+}
+
+@keyframes scrollDownSp {
+  0% {
+    transform: translateY(rem($scroll-height-sp * -1));
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes scrollDown {
+  0% {
+    transform: translateY(rem($scroll-height * -1));
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
