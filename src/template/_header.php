@@ -12,6 +12,7 @@
   <link rel="shortcut icon" href="/lp/src/images/favicon.png">
   <link rel="apple-touch-icon-precomposed" href="/lp/src/images/apple-touch.png">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/add.css">
 
 
   <!-- Google Tag Manager_1 -->

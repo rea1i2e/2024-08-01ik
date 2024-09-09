@@ -4,13 +4,12 @@
 @if $startFrom == sp {
   //スマホファースト
   html {
+        //375px~767px
+        font-size: 16px;
     //~375px
     @media (max-width: 375px) {
       font-size: vw(375, 16);
     }
-
-    //375px~767px
-    font-size: 16px;
 
     @include mq("md") {
       font-size: vw($inner-pc + $padding-pc * 2, 16);
