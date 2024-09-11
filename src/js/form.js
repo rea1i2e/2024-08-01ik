@@ -95,6 +95,7 @@ $("#top-cta").click(function () {
     scrollToContactSection();
 });
 
+// クラス名の変更が必要
 $(".select-box").on("change", function () {
     if ($(".select-box").val()) {
         $(".select-box").css("color", "#222");

@@ -2,15 +2,11 @@
 @use 'sass:math';
 
 .c-text {
-  font-size: rem(14);
-  font-style: normal;
-  letter-spacing: calc(0.84em / 28);
-  line-height: calc(42 / 28);
-  text-align: justify;
-  color: red;
+  font-size: rem(13);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 2;
   @include mq() {
     font-size: rem(16);
-    letter-spacing: calc(0.48em / 16);
-    line-height: calc(30 / 16);
   }
 }

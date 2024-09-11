@@ -1,0 +1,35 @@
+@use "global" as *;
+
+.c-heading {
+  color: #0066C5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(14);
+}
+
+.c-heading__jp {
+  margin-block: var(--leading-trim);
+  font-size: maxrem(33);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  @include mq() {
+    font-size: maxrem(60);
+  }
+}
+
+.c-heading__en {
+  margin-block: var(--leading-trim);
+  font-size: maxrem(11);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  text-transform: uppercase;
+  @include mq() {
+    font-size: maxrem(16);
+  }
+}

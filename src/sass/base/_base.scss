@@ -89,6 +89,8 @@ body {
   text-rendering: optimizeSpeed;
   font-family: $base-font-family;
   line-height: 1.5;
+  background: url(../images/bg_sp.webp) repeat-y center / 100%;
+  background-image: url(../images/bg_sp.png);
 }
 
 main {
