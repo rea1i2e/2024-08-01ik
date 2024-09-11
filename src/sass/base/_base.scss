@@ -74,6 +74,10 @@ a:focus-visible {
   }
 }
 
+:root {
+  --leading-trim: calc((1em - 1lh) / 2);
+}
+
 html {
   scroll-behavior: smooth;
   scroll-padding-top: rem(60);
@@ -81,6 +85,8 @@ html {
     scroll-padding-top: rem(100);
   }
 }
+
+
 
 body {
   display: flex;

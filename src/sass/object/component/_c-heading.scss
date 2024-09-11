@@ -5,7 +5,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: rem(14);
+  gap: rem(18);
+  @include mq() {
+    gap: rem(27);
+  }
 }
 
 .c-heading__jp {

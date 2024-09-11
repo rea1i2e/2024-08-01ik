@@ -20,24 +20,23 @@ $(document).ready(function () {
   }
 
   $("#submit-button").click(function () {
-    var considerationField = "consideration";
     $("#submit-button").prop("disabled", true);
     $(".error-message").remove();
 
     // Validate required fields
-    ["applicant_name", "furigana", "email_address", "corporate_name"].forEach(
-      function (field) {
-        if (isEmpty($("[name=" + field + "]").val())) {
-          showErrorMessage(field, "必須入力項目です");
-        }
+    [
+      "applicant_name",
+      "furigana",
+      "email_address",
+      "telephone_number",
+      "corporate_name",
+      "consideration",
+      "message",
+    ].forEach(function (field) {
+      if (isEmpty($("[name=" + field + "]").val())) {
+        showErrorMessage(field, "必須入力項目です");
       }
-    );
-
-    if (isEmpty($("[name=" + considerationField + "]").val())) {
-      $("[for=" + considerationField + "]").after(
-        '<div class="error-message">必須入力項目です</div>'
-      );
-    }
+    });
 
     // Validate furigana
     if (
@@ -82,27 +81,27 @@ $(document).ready(function () {
     if (!$("#privacy-policy").is(":checked")) {
       showErrorMessage("privacy_policy", "個人情報保護方針に同意してください");
     }
-    
+
     // Submit form if no errors
     if ($(".error-message").length === 0) {
-        $("#registration-form").submit();
+      $("#registration-form").submit();
     } else {
-        scrollToContactSection();
+      scrollToContactSection();
     }
-});
+  });
 
-$("#top-cta").click(function () {
+  $("#top-cta").click(function () {
     scrollToContactSection();
-});
+  });
 
-// クラス名の変更が必要
-$(".select-box").on("change", function () {
-    if ($(".select-box").val()) {
-        $(".select-box").css("color", "#222");
-    } else {
-        $(".select-box").css("color", "#8a8a8a");
-    }
+/* ------------------------------
+セレクトボックスの初期値スタイル変更
+------------------------------ */
+$(".js-select-box").on("change", function () {
+  if ($(".js-select-box").val()) {
+    $(".js-select-box").css("color", "#222");
+  } else {
+    $(".js-select-box").css("color", "rgba(34, 34, 34, 0.3)");
+  }
 });
 });
-
-console.log("エラー");
