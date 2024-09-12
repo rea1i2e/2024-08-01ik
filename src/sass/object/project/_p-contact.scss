@@ -11,34 +11,109 @@
 
 .p-contact__container {
   margin-top: rem(35);
-  padding: rem(35) rem(20);
+  padding: rem(35) rem(20) rem(45);
   background-color: #fff;
   border-radius: rem(10);
-  box-shadow: 0 0 rem(20) 0 #F0F1F2;
-  overflow-y: scroll;
-  scrollbar-color: #DFDFDF #fff; // Firefox対応
-
+  box-shadow: 0 0 rem(20) 0 #f0f1f2;
   @include mq() {
     margin-top: rem(58);
-    padding: rem(105) rem(120);
-    box-shadow: 0 0 rem(40) 0 #F0F1F2;
+    padding: rem(105) rem(120) rem(76);
+    box-shadow: 0 0 rem(40) 0 #f0f1f2;
     border-radius: rem(20);
   }
 }
 
-
-// 必須
-.p-contact__container::-webkit-scrollbar {
-  background: #000;
-  width: 2px;
+.p-contact__tel {
+  margin-top: rem(55);
+  position: relative;
+  @include mq() {
+    margin-top: rem(115);
+    margin-inline: auto;
+    max-width: rem(800);
+  }
 }
 
-.p-contact__container::-webkit-scrollbar-track {
-  background-color: #fff;
+.p-contact__tel-container {
+  border: rem(2) solid #0066c5;
   border-radius: rem(10);
+  box-shadow: rem(4) rem(4) 0 #0066c5;
+  text-align: center;
+  background-image: linear-gradient(0deg, transparent calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px)),
+  linear-gradient(90deg, transparent calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
+  background-size: rem(13) rem(13);
+  background-repeat: repeat;
+  background-position: top center;
+  overflow: clip;
+  @include mq() {
+    background-size: rem(26) rem(26);
+    box-shadow: rem(6) rem(6) 0 #0066c5;
+    border-radius: rem(20);
+    border-width: rem(3);
+  }
 }
 
-.p-contact__container::-webkit-scrollbar-thumb {
-  background-color: #DFDFDF;
-  border-radius: rem(10);
+.p-contact__tel-heading {
+  margin-block: var(--leading-trim);
+  padding: rem(14) rem(22) rem(15);
+  background-color: #0066c5;
+  color: #fff;
+  font-size: maxrem(19);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  @include mq() {
+    font-size: maxrem(28);
+  }
+}
+
+.p-contact__tel-content {
+  padding: rem(32) rem(30) rem(33);
+  @include mq() {
+    padding: rem(41) rem(30) rem(48);
+  }
+}
+
+.p-contact__tel-link {
+  color: #ff8020;
+  font-size: maxrem(33);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  @include mq() {
+    font-size: maxrem(60);
+  }
+}
+
+.p-contact__tel-info {
+  margin-top: rem(16);
+  font-size: maxrem(13);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  @include mq() {
+    margin-top: rem(23);
+     font-size: maxrem(16);
+   }
+}
+
+.p-contact__tel-image {
+  position: absolute;
+  top: rem(-16);
+  left: rem(-10);
+  width: rem(70);
+  @include mq() {
+    top: rem(-35);
+    left: rem(-41);
+    width: rem(148);
+  }
+}
+
+.p-contact__tel-image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 140 / 143;
+  object-fit: contain;
 }

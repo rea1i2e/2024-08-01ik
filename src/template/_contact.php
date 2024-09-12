@@ -34,17 +34,17 @@
               <dt class="p-form__dt"><label for="corporate-name">会社名<span class="p-form__item-required">(必須)</span></label></dt>
               <dd class="p-form__dd"><input id="corporate-name" type="text" name="corporate_name" placeholder="例）株式会社example" value="<?php echo $_POST['corporate_name'] ?>"></dd>
             </div>
-  <div class="p-form__item">
-    <dt class="p-form__dt"><label for="consideration">検討内容<span class="p-form__item-required">(必須)</span></label></dt>
-    <dd class="p-form__dd">
-        <select id="consideration" class="js-select-box" name="consideration">
-          <option value="">選択してください</option>
-          <option value="時期は未定だがサービスの詳細を知りたい" <?= $_POST["consideration"] == "時期は未定だがサービスの詳細を知りたい" ? "selected" : ""; ?>>時期は未定だがサービスの詳細を知りたい</option>
-          <option value="分析サービスの導入を考えている" <?= $_POST["consideration"] == "分析サービスの導入を考えている" ? "selected" : ""; ?>>分析サービスの導入を考えている</option>
-          <option value="その他" <?= $_POST["consideration"] == "その他" ? "selected" : ""; ?>>その他</option>
-        </select>
-    </dd>
-  </div>
+            <div class="p-form__item">
+              <dt class="p-form__dt"><label for="consideration">検討内容<span class="p-form__item-required">(必須)</span></label></dt>
+              <dd class="p-form__dd">
+                <select id="consideration" class="js-select-box" name="consideration">
+                  <option value="">選択してください</option>
+                  <option value="時期は未定だがサービスの詳細を知りたい" <?= $_POST["consideration"] == "時期は未定だがサービスの詳細を知りたい" ? "selected" : ""; ?>>時期は未定だがサービスの詳細を知りたい</option>
+                  <option value="分析サービスの導入を考えている" <?= $_POST["consideration"] == "分析サービスの導入を考えている" ? "selected" : ""; ?>>分析サービスの導入を考えている</option>
+                  <option value="その他" <?= $_POST["consideration"] == "その他" ? "selected" : ""; ?>>その他</option>
+                </select>
+              </dd>
+            </div>
             <div class="p-form__item">
               <dt class="p-form__dt"><label for="message">お問い合わせ内容<span class="p-form__item-required">(必須)</span></label></dt>
               <dd class="p-form__dd"><textarea id="message" rows="5" name="message" placeholder="お問い合わせの内容を入力してください"><?= $_POST["message"] ?></textarea></dd>
@@ -75,5 +75,18 @@
           </div>
         </form>
       </div>
-    </div>
+      <div class="p-contact__tel">
+        <div class="p-contact__tel-container">
+          <h3 class="p-contact__tel-heading">お電話での<wbr>お問い合わせはこちら</h3>
+          <div class="p-contact__tel-content">
+            <a href="tel:03-6892-4074" class="p-contact__tel-link">03-6892-4074</a>
+            <p class="p-contact__tel-info">
+              受付時間 10:00-17:00 [ 土・日・祝日除く ]
+            </p>
+          </div>
+        </div>
+        <figure class="p-contact__tel-image">
+          <img src="assets/images/img_woman.svg" alt="イラスト：電話対応する女性" width="140" height="143">
+        </figure>
+      </div>
   </section>
