@@ -13,18 +13,18 @@ class Loader implements LoaderInterface
      *
      * @var string[]|null
      */
-    protected #ffflist;
+    protected $whitelist;
 
     /**
      * Create a new loader instance.
      *
-     * @param string[]|null #ffflist
+     * @param string[]|null $whitelist
      *
      * @return void
      */
-    public function __construct(array #ffflist = null)
+    public function __construct(array $whitelist = null)
     {
-        $this->whitelist = #ffflist;
+        $this->whitelist = $whitelist;
     }
 
     /**
