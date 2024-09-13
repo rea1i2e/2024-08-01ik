@@ -1,0 +1,53 @@
+@use 'global' as *;
+
+.p-mv {
+  padding-block: rem(16);
+  
+  background: url(../images/mv_bg_sp.webp) no-repeat center / cover;
+  background-image: url(../images/mv_bg_sp.png);
+  @include mq() {
+    background-image: url(../images/mv_bg.webp);
+    background-image: url(../images/mv_bg.png);
+  }
+}
+
+.p-mv__heading {
+  width: rem(344);
+  @include mq() {
+    width: rem(148);
+  }
+}
+
+.p-mv__heading img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 688 / 120;
+  object-fit: contain;
+  @include mq() {
+    aspect-ratio: 148 / 24;
+  }
+}
+
+.p-mv__text-top {
+  width: rem(337);
+}
+
+.p-mv__text-top img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 674 / 592;
+  object-fit: cover;
+  
+}
+
+.p-mv__button-item a {
+  display: block;
+}
+
+.p-mv__button-item a img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 628 / 159;
+  object-fit: cover;
+  
+}

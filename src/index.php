@@ -10,7 +10,7 @@ require_once UTIL_DIR.'/common.php';
 
 <?php include(TEMPLATE_DIR.'/_header.php'); ?>
 <main>
-  <?php include(TEMPLATE_DIR.'/_index-content.php'); ?>
+  <?php include(TEMPLATE_DIR.'/_mv.php'); ?>
   <?php include(TEMPLATE_DIR.'/_contact.php'); ?>
 </main>
 <?php include(TEMPLATE_DIR.'/_footer.php'); ?>

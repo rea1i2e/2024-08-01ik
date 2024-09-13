@@ -38,20 +38,5 @@
 
 <body <?php echo $bodyOption; ?>>
   <!-- Google Tag Manager_2 -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDQWCLW"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDQWCLW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager_2 -->
-
-  <header class="header">
-    <div class="header-content">
-      <div class="header-content__tel-email">
-        <a href="tel:03-6892-4074" tabindex="-1">
-          03-6892-4074
-        </a>
-        <span class="srash">/</span>
-        <a href="mailto:info@ilhope.co.jp" tabindex="-1">
-          info@ilhope.co.jp
-        </a>
-      </div>
-    </div>
-  </header>
