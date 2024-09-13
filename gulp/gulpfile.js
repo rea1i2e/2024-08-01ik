@@ -19,6 +19,9 @@ const changed = require("gulp-changed"); // 変更されたファイルのみを
 const del = require("del"); // ファイルやディレクトリを削除するためのモジュール
 const webp = require('gulp-webp');//webp変換
 const rename = require('gulp-rename');//ファイル名変更
+const pixrem = require("pixrem");
+const combineMq = require("postcss-combine-media-query");
+
 
 // 読み込み先
 const srcPath = {
@@ -78,11 +81,12 @@ const cssSass = () => {
       )
       // CSSプロパティをアルファベット順にソートし、未来のCSS構文を使用可能に
       .pipe(
-        postcss([cssdeclsort({
-          order: "alphabetical"
-        })]
-        ),
-        postcssPresetEnv({ browsers: 'last 2 versions' })
+        postcss([
+          cssdeclsort({ order: "alphabetical" }),
+          pixrem({ atrules: true }),
+          postcssPresetEnv({ browsers: "last 2 versions" }),
+          combineMq() // 2023/09/08 style.css.map に対応する
+        ])
       )
       // メディアクエリを統合
       .pipe(mmq())
