@@ -1,12 +1,7 @@
 @use "global" as *;
 
-.p-problems {
-  padding-block: rem(47) rem(30);
-  background: url(../images/problems_bg.png) repeat-y center / 100%;
-  @include mq() {
-    padding-block: vwl(116) vwl(100);
-  }
-}
+// .p-problems {
+// }
 
 .p-problems__inner {
   position: relative;

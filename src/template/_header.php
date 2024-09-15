@@ -35,7 +35,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Roboto:wght@700&display=swap" rel="stylesheet">
-
+</head>
 <body <?php echo $bodyOption; ?>>
   <!-- Google Tag Manager_2 -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDQWCLW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

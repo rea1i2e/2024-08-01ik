@@ -34,7 +34,6 @@
         ],
     ];
     ?>
-
     <ul class="p-problems__items">
       <?php foreach ($problems as $problem): ?>
         <li class="p-problems__item">

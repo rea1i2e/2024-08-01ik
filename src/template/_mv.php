@@ -22,6 +22,8 @@
         <li class="p-mv__button-item">
           <a href="#">
             <img src="assets/images/mv_button_mail.png" alt="お問い合わせ" width="628" height="159">
+          </a>
+        </li>
       </ul>
       <p class="p-mv__text-bottom">
         <picture>
