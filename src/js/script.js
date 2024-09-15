@@ -24,70 +24,84 @@ function debounce(callback, delay) {
 window.addEventListener('resize', debounce(updateScrollBarWidth))
 window.addEventListener('load', updateScrollBarWidth)
 
-/* ------------------------------
-ドロワーメニュー
------------------------------- */
-const menuButton = document.getElementById("js-menu");
-const drawerMenu = document.getElementById("js-drawer");
-const body = document.body;
-
-function openDrawerMenu() {
-  menuButton.setAttribute("aria-expanded", "true");
-  drawerMenu.setAttribute("aria-hidden", "false");
-  body.classList.add("is-drawerActive");
-  body.style.overflow = "hidden";
-}
-
-function closeDrawerMenu() {
-  menuButton.setAttribute("aria-expanded", "false");
-  drawerMenu.setAttribute("aria-hidden", "true");
-  body.classList.remove("is-drawerActive");
-  body.style.overflow = "visible";
-}
-
-menuButton.addEventListener("click", function () {
-  if (menuButton.getAttribute("aria-expanded") === "true") {
-    closeDrawerMenu();
-  } else {
-    openDrawerMenu();
-  }
-});
-
-const anchorLinks = document.querySelectorAll('a[href^="#"]');
-
-anchorLinks.forEach(function (link) {
-  link.addEventListener("click", function () {
-    closeDrawerMenu();
-  });
-});
-
-document.addEventListener("click", function (event) {
-  if (
-    (!drawerMenu || (drawerMenu && !drawerMenu.contains(event.target))) &&
-    (!menuButton || (menuButton && !menuButton.contains(event.target)))
-  ) {
-    closeDrawerMenu();
-  }
-});
-
-window.addEventListener('resize', function() {
-  if (window.innerWidth >= 768) {
-    closeDrawerMenu();
-  }
-});
 
 /* ------------------------------
-トップ・スライダー
+アコーディオン
 ------------------------------ */
-const mvSwiper = new Swiper(".js-mv-swiper", {
-  loop: true,
-  // autoplay: {
-  //   delay: 2000 // 2秒ごに次のスライド
-  // },
-  effect: "fade",
-  fadeEffect: {
-    crossFade: true
-  },
-  speed: 3000 // 3秒かけて切り替え
+document.addEventListener("DOMContentLoaded", function () {
+	setUpAccordion();
 });
 
+/**
+ * ライブラリ(GSAP)を使ってアコーディオンのアニメーションを制御します
+ */
+var setUpAccordion = function setUpAccordion() {
+	var details = document.querySelectorAll(".js-details");
+	var IS_OPENED_CLASS = "is-opened"; // アイコン操作用のクラス名
+
+	details.forEach(function (element) {
+		var summary = element.querySelector(".js-summary");
+		var content = element.querySelector(".js-content");
+		summary.addEventListener("click", function (event) {
+			// デフォルトの挙動を無効化
+			event.preventDefault();
+
+			// is-openedクラスの有無で判定（detailsのopen属性の判定だと、アニメーション完了を待つ必要がありタイミング的に不安定になるため）
+			if (element.classList.contains(IS_OPENED_CLASS)) {
+				// アコーディオンを閉じるときの処理
+				// アイコン操作用クラスを切り替える(クラスを取り除く)
+				element.classList.toggle(IS_OPENED_CLASS);
+
+				// アニメーション実行
+				closingAnim(content, element).restart();
+			} else {
+				// アコーディオンを開くときの処理
+				// アイコン操作用クラスを切り替える(クラスを付与)
+				element.classList.toggle(IS_OPENED_CLASS);
+
+				// open属性を付与
+				element.setAttribute("open", "true");
+
+				// アニメーション実行
+				openingAnim(content).restart();
+			}
+		});
+	});
+};
+
+/**
+ * アコーディオンを閉じる時のアニメーション
+ */
+var closingAnim = function closingAnim(content, element) {
+	return gsap.to(content, {
+		height: 0,
+		opacity: 0,
+		duration: 0.4,
+		ease: "power3.out",
+		overwrite: true,
+		onComplete: function onComplete() {
+			// アニメーションの完了後にopen属性を取り除く
+			element.removeAttribute("open");
+		},
+	});
+};
+
+/**
+ * アコーディオンを開く時のアニメーション
+ */
+var openingAnim = function openingAnim(content) {
+	return gsap.fromTo(
+		content,
+		{
+			height: 0,
+			opacity: 0,
+		},
+		{
+			height: "auto",
+			opacity: 1,
+			duration: 0.4,
+			ease: "power3.out",
+			overwrite: true,
+		}
+	);
+};

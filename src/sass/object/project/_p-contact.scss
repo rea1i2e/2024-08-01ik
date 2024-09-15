@@ -34,9 +34,9 @@
 }
 
 .p-contact__tel-container {
-  border: rem(2) solid #0066c5;
+  border: rem(2) solid $blue;
   border-radius: rem(10);
-  box-shadow: rem(4) rem(4) 0 #0066c5;
+  box-shadow: rem(4) rem(4) 0 $blue;
   text-align: center;
   background-image: linear-gradient(0deg, transparent calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px)),
   linear-gradient(90deg, transparent calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
@@ -46,7 +46,7 @@
   overflow: clip;
   @include mq() {
     background-size: rem(26) rem(26);
-    box-shadow: rem(6) rem(6) 0 #0066c5;
+    box-shadow: rem(6) rem(6) 0 $blue;
     border-radius: rem(20);
     border-width: rem(3);
   }
@@ -55,7 +55,7 @@
 .p-contact__tel-heading {
   margin-block: var(--leading-trim);
   padding: rem(14) rem(22) rem(15);
-  background-color: #0066c5;
+  background-color: $blue;
   color: #fff;
   font-size: maxrem(19);
   font-weight: 700;

@@ -94,7 +94,7 @@
 
 .p-feature__item-heading {
   margin-block: var(--leading-trim);
-  color: #0066C5;
+  color: $blue;
   font-size: maxrem(21);
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -124,6 +124,6 @@
 }
 
 .p-feature__item-description a {
-  color: #0066C5;
+  color: $blue;
   text-decoration: underline;
 }

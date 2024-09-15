@@ -75,7 +75,7 @@
 }
 
 .p-problems__em {
-  color: #0066c5;
+  color: $blue;
   font-style: normal;
   font-size: maxrem(41);
   font-weight: 700;
@@ -99,7 +99,7 @@
   width: vwl(7);
   height: auto;
   aspect-ratio: 1/1;
-  background-color: #0066c5;
+  background-color: $blue;
   border-radius: 50%;
   content: "";
   @include mq() {
@@ -236,7 +236,7 @@
 }
 
 .p-problems__items-text-em {
-  color: #0066c5;
+  color: $blue;
   font-style: normal;
   font-size: maxrem(13.5);
   @include mq() {

@@ -17,6 +17,7 @@ require_once UTIL_DIR . '/common.php';
   </div>
     <?php include(TEMPLATE_DIR . '/_feature.php'); ?>
     <?php include(TEMPLATE_DIR . '/_flow.php'); ?>
+    <?php include(TEMPLATE_DIR . '/_faq.php'); ?>
   <?php include(TEMPLATE_DIR . '/_contact.php'); ?>
 </main>
 

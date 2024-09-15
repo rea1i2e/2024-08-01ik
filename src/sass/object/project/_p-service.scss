@@ -151,7 +151,7 @@
 }
 
 .p-service__content1-text-em {
-  color: #0066c5;
+  color: $blue;
   font-style: normal;
   font-size: rem(25);
   @include mq() {
@@ -223,9 +223,9 @@
 .p-service__content2 {
   margin-top: rem(35);
   padding: rem(35) rem(25) rem(50);
-  border: rem(2) solid #0066c5;
+  border: rem(2) solid $blue;
   border-radius: rem(10);
-  box-shadow: rem(4) rem(4) 0 #0066c5;
+  box-shadow: rem(4) rem(4) 0 $blue;
   text-align: center;
   background-image: linear-gradient(0deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px)),
   linear-gradient(90deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
@@ -238,7 +238,7 @@
     margin-top: rem(68);
     position: relative;
     background-size: rem(26) rem(26);
-    box-shadow: rem(6) rem(6) 0 #0066c5;
+    box-shadow: rem(6) rem(6) 0 $blue;
     border-radius: rem(20);
     border-width: rem(3);
     display: grid;

@@ -2,7 +2,7 @@
 
 .p-flow {
   padding-block: rem(47) rem(50);
-  background-color: #0066c5;
+  background-color: $blue;
   color: #fff;
   @include mq() {
     padding-block: rem(98) rem(86);
