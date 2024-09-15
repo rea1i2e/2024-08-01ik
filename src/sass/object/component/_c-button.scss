@@ -1,6 +1,7 @@
-@use 'global' as *;
+@use "global" as *;
 
 .c-button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -13,14 +14,13 @@
   color: #fff;
   font-size: maxrem(13);
   font-weight: 700;
-  letter-spacing: 0.06em;  
+  letter-spacing: 0.06em;
   line-height: 1;
   @include mq() {
     width: rem(240);
     font-size: maxrem(14);
   }
 }
-
 
 .c-button::after {
   display: inline-block;
@@ -31,10 +31,32 @@
   content: "";
 }
 
-
 .c-button--2::after {
- transform: translateX(rem(13)); 
+  transform: translateX(rem(13));
   @include mq() {
-    
+  }
+}
+
+.c-button--arrow {
+  width: rem(234);
+  @include mq() {
+    width: rem(270);
+    padding: rem(27)
+  }
+}
+
+.c-button--arrow::after {
+  position: absolute;
+  top: 50%;
+  right: rem(22);
+  transform: translateY(-50%);
+  display: inline-block;
+  width: rem(11);
+  height: auto;
+  aspect-ratio: 11 / 16;
+  background: url(../images/arrow_right.svg) no-repeat center / contain;
+  content: "";
+  @include mq() {
+    right: rem(28);
   }
 }
