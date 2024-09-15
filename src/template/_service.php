@@ -26,12 +26,14 @@
   </div>
   <div class="p-service__item2">
     <div class="p-service__inner2 l-inner">
-      <p class="p-service__copy3">
-        <picture>
-          <source srcset="assets/images/service_copy3_sp.svg" width="888" height="213" media="(max-width: 767px)">
-          <img src="assets/images/service_copy3.svg" alt="サプリメント・飲料水・化粧品のアンチ・ドーピング対策なら実績多数のイルホープにお任せ下さい！" width="564" height="104">
-        </picture>
-      </p>
+      <div class="p-service__copy3">
+        <p class="c-copy">
+          <picture>
+            <source srcset="assets/images/copy_sp.svg" width="888" height="213" media="(max-width: 767px)">
+            <img src="assets/images/copy.svg" alt="サプリメント・飲料水・化粧品のアンチ・ドーピング対策なら実績多数のイルホープにお任せ下さい！" width="564" height="104">
+          </picture>
+        </p>
+      </div>
       <div class="p-service__content2">
         <figure class="p-service__content2-logo">
           <?php

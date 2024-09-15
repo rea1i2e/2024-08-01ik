@@ -203,21 +203,7 @@
 }
 
 .p-service__copy3 {
-  margin-inline: auto;
-  width: rem(344);
-  @include mq() {
-    width: rem(1200);
-  }
-}
-
-.p-service__copy3 img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 688 / 386;
-  object-fit: contain;
-  @include mq() {
-    aspect-ratio: 1200 / 177;
-  }
+  text-align: center;
 }
 
 .p-service__content2 {
@@ -228,7 +214,7 @@
   box-shadow: rem(4) rem(4) 0 $blue;
   text-align: center;
   background-image: linear-gradient(0deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px)),
-  linear-gradient(90deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
+    linear-gradient(90deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
   background-size: rem(13) rem(13);
   background-repeat: repeat;
   background-position: top center;
@@ -253,7 +239,6 @@
   width: rem(140);
   @include mq() {
     width: 100%;
-
   }
 }
 

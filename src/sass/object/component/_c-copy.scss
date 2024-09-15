@@ -1,0 +1,19 @@
+@use 'global' as *;
+
+.c-copy {
+  display: inline-block;
+  width: rem(344);
+  @include mq() {
+    width: rem(1200);
+  }
+}
+
+.c-copy img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 688 / 386;
+  object-fit: contain;
+  @include mq() {
+    aspect-ratio: 1200 / 177;
+  }
+}

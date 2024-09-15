@@ -1,0 +1,118 @@
+@use "global" as *;
+
+.p-domestic.u-bg1 { // 調整する
+  padding-bottom: rem(44);
+  @include mq() {
+    padding-bottom: rem(114);
+    
+  }
+}
+
+.p-domestic__inner {
+}
+
+.p-domestic__wrapper {
+  position: relative;
+}
+
+.p-domestic__container {
+  border: rem(2) solid $blue;
+  border-radius: rem(10);
+  box-shadow: rem(4) rem(4) 0 $blue;
+  background-image: linear-gradient(0deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px)),
+    linear-gradient(90deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
+  background-size: rem(13) rem(13);
+  background-repeat: repeat;
+  background-position: top center;
+  overflow: clip;
+  @include mq() {
+    background-size: rem(26) rem(26);
+    box-shadow: rem(6) rem(6) 0 $blue;
+    border-radius: rem(20);
+    border-width: rem(3);
+  }
+}
+
+.p-domestic__heading {
+  margin-block: var(--leading-trim);
+  padding: rem(23) rem(22) rem(20);
+  background-color: $blue;
+  color: #fff;
+  font-size: maxrem(19);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  text-align: center;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  text-align: center;
+  @include mq() {
+    padding: rem(18) rem(22) rem(17);
+    font-size: maxrem(28);
+  }
+}
+
+.p-domestic__wrapper::after {
+  position: absolute;
+  top: rem(-32);
+  left: rem(-20);
+  display: inline-block;
+  width: rem(84);
+  height: auto;
+  aspect-ratio: 160 / 120;
+  background: url(../images/img_drug.png) no-repeat center / contain;
+  content: "";
+  @include mq() {
+    top: rem(-3);
+    left: rem(64);
+    width: rem(102);
+  }
+}
+
+.p-domestic__content {
+  padding: rem(38) rem(30) rem(40);
+  @include mq() {
+    padding: rem(25) rem(57) rem(45);
+    padding: 25px 57px 45px;
+  }
+}
+
+.p-domestic__info {
+  margin-block: var(--leading-trim);
+  font-size: maxrem(13);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  @include mq() {
+    margin-top: rem(23);
+    font-size: maxrem(16);
+  }
+}
+
+.p-domestic__illust {
+  display: none;
+  @include mq() {
+    position: absolute;
+    top: rem(-36);
+    right: rem(50);
+    z-index: 1;
+    display: block;
+    width: rem(140);
+  }
+}
+
+.p-domestic__illust img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 140 / 110;
+  object-fit: contain;
+}
+
+.p-domestic__copy {
+  margin-top: rem(45);
+  
+  text-align: center;
+  @include mq() {
+    margin-top: rem(80);
+  }
+}
