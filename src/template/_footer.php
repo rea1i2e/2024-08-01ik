@@ -2,8 +2,8 @@
   <div class="p-footer__bg">
     <div class="p-footer__inner l-inner">
       <ul class="p-footer__nav">
-        <li class="p-footer__nav-item"><a href="/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a></li>
-        <li class="p-footer__nav-item"><a href="/" target="_blank" rel="noopener noreferrer">会社概要</a></li>
+        <li class="p-footer__nav-item"><a href="https://ilhope.co.jp/privacy-policy/" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a></li>
+        <li class="p-footer__nav-item"><a href="https://ilhope.co.jp/company/" target="_blank" rel="noopener noreferrer">会社概要</a></li>
       </ul>
       <p class="p-footer__copyright">
         <small><a href="/" tabindex="-1">© イルホープ All Rights Reserved.</a></small>

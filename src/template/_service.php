@@ -55,10 +55,10 @@
             イルホープでは、サプリメントや化粧品等に混入する可能性の高いドーピング禁止物質の分析サービスを行っています。分析項目については、WADA（世界アンチ・ドーピング機構）の規定するドーピング禁止リストなどをもとに、サプリメント等に混入する可能性の高いドーピング禁止物質をドーピングの専門家とともに選定しています。分析結果は外部への公開が可能な「分析結果報告書」として提出いたします。
           </p>
           <div class="p-service__content2-buttons">
-            <a href="" class="p-service__content2-button c-button">
+            <a href="https://ilhope.co.jp/outcome/" class="p-service__content2-button c-button" target="_blank" rel="noopener noreferrer">
               これまでの分析結果一覧
             </a>
-            <a href="" class="p-service__content2-button c-button c-button--2">
+            <a href="https://ilhope.co.jp/service/method/" class="p-service__content2-button c-button c-button--2" target="_blank" rel="noopener noreferrer">
               分析手法と分析精度
             </a>
           </div>

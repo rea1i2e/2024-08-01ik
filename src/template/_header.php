@@ -26,8 +26,8 @@
   <meta name="description" content="ドーピング禁止物質分析サービス">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- icon -->
-  <link rel="shortcut icon" href="/lp/src/images/favicon.png">
-  <link rel="apple-touch-icon-precomposed" href="/lp/src/images/apple-touch.png">
+  <link rel="shortcut icon" href="favicon.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch.png">
   <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
   <link rel="stylesheet" href="./assets/css/add.css">
 

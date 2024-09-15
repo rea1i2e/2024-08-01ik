@@ -32,7 +32,7 @@
           </a>
         </li>
         <li class="p-mv__button-item">
-          <a href="mailto:info@ilhope.jp">
+          <a href="#contact-section">
             <?php
             $args = [
               'sp' => false,

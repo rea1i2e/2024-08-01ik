@@ -1,7 +1,7 @@
 <div class="p-fixed l-fixed">
   <ul class="p-fixed__button-items">
     <li class="p-fixed__button-item">
-      <a href="mailto:info@ilhope.jp">
+      <a href="#contact-section">
         <?php
       $args = [
         'sp' => true,
