@@ -3,7 +3,7 @@
     <div class="p-feature__heading">
       <hgroup class="c-heading">
         <h2 class="c-heading__jp">分析サービスの特徴</h2>
-        <p class="c-heading__en">contact</p>
+        <p class="c-heading__en">feature</p>
       </hgroup>
     </div>
     <ul class="p-feature__items">
@@ -51,7 +51,6 @@
       foreach ($features as $feature) {
       ?>
       <li class="p-feature__item">
-        <div class="p-feature__item-inner">
           <figure class="p-feature__image">
             <?php
             $args = [
@@ -85,7 +84,6 @@
             </p>
             <?php } ?>
           </div>
-        </div>
       </li>
       <?php 
         $counter++; // Increment counter

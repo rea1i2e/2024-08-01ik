@@ -1,0 +1,8 @@
+@use 'global' as *;
+
+.l-feature {
+  margin-top: rem(47);
+  @include mq() {
+    margin-top: rem(98);
+  }
+}

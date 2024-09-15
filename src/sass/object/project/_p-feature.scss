@@ -1,0 +1,129 @@
+@use "global" as *;
+
+// .p-feature {
+// }
+
+.p-feature__inner {
+  // padding-inline: rem(25); // test
+}
+
+// .p-feature__heading {
+// }
+
+.p-feature__items {
+  margin-top: rem(38);
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: rem(55);
+  @include mq() {
+    margin-top: rem(70);
+    gap: rem(71);
+  }
+}
+
+.p-feature__item {
+  @include mq() {
+    display: grid;
+    grid-template-columns: rem(440) 1fr;
+    gap: rem(50);
+  }
+}
+
+.p-feature__image {
+  position: relative;
+}
+
+.p-feature__image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 440 / 270;
+  object-fit: cover;
+  box-shadow: 0 0 rem(10) 0 rgba(#8EA8D8, 0.25);
+  border-radius: rem(10);
+  @include mq() {
+    border-radius: rem(20);
+  }
+}
+
+.p-feature__item-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  width: rem(62);
+  height: auto;
+  padding: rem(13);
+  aspect-ratio: 1/1;
+  background: url(../images/label_bg.svg) no-repeat center / contain;
+  color: #fff;
+  font-family: $font-roboto;
+  border-top-left-radius: rem(10);
+  @include mq() {
+    border-top-left-radius: rem(20);
+    width: rem(82);
+  }
+}
+
+.p-feature__item-label-text {
+  font-size: rem(10);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  @include mq() {
+    font-size: rem(13);
+  }
+}
+
+.p-feature__item-label-no {
+  font-size: rem(23);
+  font-weight: 700;
+  line-height: 1;
+  @include mq() {
+    font-size: rem(31);
+  }
+}
+
+.p-feature__item-content {
+  margin-top: rem(31);
+  @include mq() {
+    margin-top: 0;
+  }
+}
+
+.p-feature__item-heading {
+  margin-block: var(--leading-trim);
+  color: #0066C5;
+  font-size: maxrem(21);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  @include mq() {
+    font-size: maxrem(32);
+  }
+}
+
+.p-feature__item-description {
+  margin-block: calc(rem(22) + var(--leading-trim)) var(--leading-trim);
+  font-size: maxrem(13);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 2;
+  @include mq() {
+    margin-block-start: calc(rem(34) + var(--leading-trim));
+    font-size: maxrem(16);
+  }
+}
+
+.p-feature__item-description + .p-feature__item-description {
+  margin-block-start: calc(rem(30) + var(--leading-trim));
+  @include mq() {
+    margin-block-start: calc(rem(34) + var(--leading-trim));
+  }
+}
+
+.p-feature__item-description a {
+  color: #0066C5;
+  text-decoration: underline;
+}
