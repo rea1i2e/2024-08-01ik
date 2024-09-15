@@ -1,0 +1,29 @@
+@use "global" as *;
+
+.p-fixed {
+}
+
+.p-fixed__button-items {
+  margin-inline: auto;
+  max-width: rem(384);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: rem(4);
+  @include mq() {
+    max-width: rem(606);
+    gap: rem(6);
+  }
+}
+
+.p-fixed__button-item {
+}
+
+.p-fixed__button-item a img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 380 / 106;
+  object-fit: cover;
+  @include mq() {
+    aspect-ratio: 600 / 128;
+  }
+}

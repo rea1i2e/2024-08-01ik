@@ -15,13 +15,37 @@
       </p>
       <ul class="p-mv__button-items">
         <li class="p-mv__button-item">
-          <a href="#">
-            <img src="assets/images/mv_button_tel.png" alt="03-6892-4074" width="628" height="159">
+          <a href="tel:03-6892-4074">
+            <?php
+            $args = [
+              'sp' => false,
+              'directory' => '',
+              'file' => 'mv_button_tel',
+              'type' => 'png',
+              'width' => 628,
+              'height' => 159,
+              'alt' => 'tel:03-6892-4074',
+              'lazy' => false
+            ];
+            include 'parts/common/picture.php';
+            ?>
           </a>
         </li>
         <li class="p-mv__button-item">
-          <a href="#">
-            <img src="assets/images/mv_button_mail.png" alt="お問い合わせ" width="628" height="159">
+          <a href="mailto:info@ilhope.jp">
+            <?php
+            $args = [
+              'sp' => false,
+              'directory' => '',
+              'file' => 'mv_button_mail',
+              'type' => 'png',
+              'width' => 628,
+              'height' => 159,
+              'alt' => 'お問い合わせ',
+              'lazy' => false
+            ];
+            include 'parts/common/picture.php';
+            ?>
           </a>
         </li>
       </ul>

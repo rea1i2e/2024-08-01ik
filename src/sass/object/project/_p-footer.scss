@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.p-footer {
+  display: flex;
+  flex-direction: column;
+  gap: rem(5);
+  @include mq() {
+    gap: rem(3);
+  }
+}
+
+.p-footer__bg {
+  padding-block: rem(31) rem(100);
+  background-color: $blue;
+  color: #fff;
+  @include mq() {
+    padding-block: rem(42) rem(90);
+  }
+}
+
+.p-footer::before {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 768/12;
+  background: url(../images/footer_line_sp.svg) no-repeat center / contain;
+  content: "";
+  @include mq() {
+    aspect-ratio: 1920/12;
+    background-image: url(../images/footer_line.svg);
+  }
+}
+
+.p-footer__inner {
+  @include mq() {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.p-footer__nav {
+  display: flex;
+  align-items: center;
+}
+
+.p-footer__nav-item {
+  display: flex;
+  align-items: center;
+  transform: translateX(rem(13));
+  @include mq() {
+    transform: translateX(rem(-20));
+  }
+}
+
+.p-footer__nav-item:nth-child(n + 2)::before {
+  width: 1px;
+  height: rem(15);
+  content: "";
+  background-color: rgba(#fff, 0.5);
+  @include mq() {
+    height: rem(18);
+  }
+}
+
+.p-footer__nav-item a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: rem(10);
+  padding: rem(20);
+  font-size: maxrem(12);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  @include mq() {
+    gap: rem(8);
+    font-size: maxrem(16);
+  }
+}
+
+.p-footer__nav-item a::after {
+  display: inline-block;
+  width: rem(11);
+  height: auto;
+  aspect-ratio: 1 / 1;
+  background: url(../images/icon_external.svg) no-repeat center / contain;
+  content: "";
+}
+
+.p-footer__copyright {
+  margin-top: rem(4);
+  text-align: center;
+  @include mq() {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.p-footer__copyright small {
+  font-size: maxrem(11);
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  line-height: 1;
+  opacity: 0.3;
+  @include mq() {
+    font-size: maxrem(14);
+  }
+}
