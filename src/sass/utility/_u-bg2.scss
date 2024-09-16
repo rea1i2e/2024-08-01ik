@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.u-bg2 {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: url(../images/bg_sp.webp) repeat-y top / 100%;
+  background-image: url(../images/bg_sp.png);
+}

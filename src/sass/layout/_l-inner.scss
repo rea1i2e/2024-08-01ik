@@ -8,6 +8,7 @@
 	@include mq(md) {
 		max-width: initial;
 		width: rem($inner-pc + $padding-pc * 2);
+		// width: 1200px;
 		padding-inline: rem($padding-pc);
 	}
 }

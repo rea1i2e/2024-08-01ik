@@ -37,6 +37,5 @@
         </picture>
       </p>
     </div>
-
   </div>
 </section>

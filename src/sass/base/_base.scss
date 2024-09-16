@@ -59,7 +59,10 @@ a:focus-visible {
 
 html {
   scroll-behavior: smooth;
-  min-width: rem($inner-pc + $padding-pc * 2);
+  @include mq() {
+    min-width: rem($inner-pc + $padding-pc * 2);
+    // max-width: 1200px;
+  }
 }
 
 body {
@@ -69,11 +72,12 @@ body {
   text-rendering: optimizeSpeed;
   font-family: $base-font-family;
   line-height: 1.5;
-  background: url(../images/bg_sp.webp) repeat-y top / 100%;
-  background-image: url(../images/bg_sp.png);
-  min-width: rem($inner-pc + $padding-pc * 2);
+  @include mq() {
+    min-width: rem($inner-pc + $padding-pc * 2);
+  }
 }
 
 main {
   flex: 1;
 }
+

@@ -15,5 +15,8 @@ if (isUnauthorizedAccessToThanksPage()) {
 }
 
 include(TEMPLATE_DIR.'/_header.php');
+?>
+<div class="u-bg2"></div>
+<?php
 include(TEMPLATE_DIR.'/_thanks-content.php');
 include(TEMPLATE_DIR.'/_footer.php');

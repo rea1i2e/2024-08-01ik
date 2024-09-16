@@ -2,7 +2,7 @@
 
 .p-mv {
   padding-block: rem(30) rem(43);
-  background: url(../images/mv_bg_sp.webp) no-repeat center / cover;
+  background: url(../images/mv_bg_sp.webp) no-repeat bottom / cover;
   background-image: url(../images/mv_bg_sp.png);
   @include mq() {
     padding-block: rem(24) rem(84);
@@ -12,9 +12,9 @@
 }
 
 .p-mv__inner {
-  max-width: initial;
+  // max-width: initial;
   @include mq() {
-    max-width: initial;
+    // max-width: initial;
     padding-inline: rem(15);
   }
 }
@@ -71,7 +71,9 @@
 
 .p-mv__button-items {
   margin-top: rem(40);
-  margin-inline: auto;
+  // margin-inline: auto;
+  margin-left: rem(16);
+  
   display: flex;
   flex-direction: column;
   gap: rem(10);
@@ -79,7 +81,7 @@
   @include mq() {
     order: 1;
     margin-top: rem(50);
-    margin-left: 0;
+    // margin-left: 0;
     flex-direction: row-reverse;
     width: rem(856);
     gap: rem(16);
@@ -95,6 +97,9 @@
 .p-mv__button.c-button-gradient {
   width: 100%;
   height: rem(79);
+  @include mq() {
+    height: rem(107);
+  }
 }
 
 .p-mv__button img {

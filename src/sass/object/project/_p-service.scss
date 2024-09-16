@@ -1,19 +1,79 @@
 @use "global" as *;
 
 .p-service {
+  position: relative;
 }
 
-.p-service__bg {
-  padding-block: rem(63) rem(55);
-  background: url(../images/service_top_bg_sp.svg) no-repeat center / 100%;
-  color: #fff;
+.p-service::before {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1920/100;
+  background: url(../images/service_bg_round.svg) no-repeat center / cover;
+  content: "";
+}
+
+.p-service::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  aspect-ratio: 769/557;
+  background: url(../images/service_texture_left2_sp.svg) no-repeat center / contain;
+  content: "";
   @include mq() {
-    padding-block: rem(96) rem(146);
-    background-image: url(../images/service_top_bg.svg);
+    left: vwl(-8);
+    height: auto;
+    width: 100%;
+    background: url(../images/service_texture_left2.svg) no-repeat center / contain;
+    aspect-ratio: 1920/834;
   }
 }
 
-.p-service__inner {
+.p-service__bg::after {
+  position: absolute;
+  bottom: 1px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  width: rem(37);
+  height: auto;
+  aspect-ratio: 90/40;
+  background-color: $blue;
+  clip-path: polygon(0 0, 50% 100%, 100% 0);
+  content: "";
+  @include mq() {
+    width: rem(90);
+  }
+}
+
+.p-service__bg {
+  position: relative;
+  padding-block: rem(40);
+  background-color: $blue;
+  color: #fff;
+  @include mq() {
+    padding-block: 0 rem(114);
+  }
+}
+
+// .p-service__inner1 {
+// }
+
+.p-service__inner1::after {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  height: auto;
+  width: calc(230 / 384 * 100%);
+  aspect-ratio: 460/ 570;
+  background: url(../images/service_texture_right_sp.svg) no-repeat center / contain;
+  content: "";
+  @include mq() {
+    width: calc(460 / 1920 * 100%);
+    background-image: url(../images/service_texture_right.svg);
+  }
 }
 
 .p-service__hgourp {
@@ -86,6 +146,7 @@
 .p-service__content1 {
   margin-top: rem(30);
   position: relative;
+  z-index: 1;
   padding: rem(37) rem(16);
   background-color: #f1f7ff;
   border-radius: rem(10);
@@ -95,7 +156,7 @@
     margin-top: rem(78);
     margin-inline: auto;
     max-width: rem(1020);
-    padding: rem(60) rem(16);
+    padding: rem(60) rem(16) rem(50);
     border-radius: rem(20);
   }
 }
@@ -193,9 +254,9 @@
 }
 
 .p-service__item2 {
-  margin-top: rem(30);
+  margin-top: rem(46);
   @include mq() {
-    margin-top: rem(88);
+    margin-top: rem(124);
   }
 }
 

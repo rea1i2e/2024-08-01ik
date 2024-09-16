@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .p-flow {
+  position: relative;
   padding-block: rem(47) rem(50);
   background-color: $blue;
   color: #fff;
@@ -8,6 +9,42 @@
     padding-block: rem(98) rem(86);
   }
 }
+
+
+
+.p-flow::before,
+.p-flow::after {
+  position: absolute;
+  display: inline-block;
+  height: auto;
+  width: rem(230);
+  aspect-ratio: 460/ 570;
+  background: no-repeat center / contain;
+  content: "";
+  @include mq() {
+    width: rem(460);
+  }
+}
+
+.p-flow::before {
+  top: 0;
+  left: 0;
+  background-image: url(../images/service_texture_left_sp.svg);
+  @include mq() {
+    background-image: url(../images/service_texture_left.svg);
+  }
+}
+
+.p-flow::after {
+  bottom: 0;
+  right: 0;
+  background-image: url(../images/service_texture_right_sp.svg);
+  @include mq() {
+    background-image: url(../images/service_texture_right.svg);
+  }
+}
+
+
 
 // .p-flow__inner {
 // }
