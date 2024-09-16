@@ -12,9 +12,7 @@
 }
 
 .p-mv__inner {
-  // max-width: initial;
   @include mq() {
-    // max-width: initial;
     padding-inline: rem(15);
   }
 }
@@ -71,7 +69,6 @@
 
 .p-mv__button-items {
   margin-top: rem(40);
-  // margin-inline: auto;
   margin-left: rem(16);
   
   display: flex;
@@ -81,7 +78,6 @@
   @include mq() {
     order: 1;
     margin-top: rem(50);
-    // margin-left: 0;
     flex-direction: row-reverse;
     width: rem(856);
     gap: rem(16);

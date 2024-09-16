@@ -7,7 +7,6 @@
   position: relative;
   max-width: rem(480);
   @include mq() {
-    // max-width: rem($inner-pc + $padding-pc * 2);
     max-width: initial;
   }
 }
