@@ -71,7 +71,7 @@
             <label for="privacy-policy">個人情報保護方針に同意する</label>
           </p>
           <div class="p-form__button">
-            <button type="button" class="p-form__submit" id="submit-button">この内容で送信</button>
+            <button type="button" class="c-button-gradient" id="submit-button">この内容で送信</button>
           </div>
         </form>
       </div>

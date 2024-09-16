@@ -15,37 +15,13 @@
       </p>
       <ul class="p-mv__button-items">
         <li class="p-mv__button-item">
-          <a href="tel:03-6892-4074">
-            <?php
-            $args = [
-              'sp' => false,
-              'directory' => '',
-              'file' => 'mv_button_tel',
-              'type' => 'png',
-              'width' => 628,
-              'height' => 159,
-              'alt' => 'tel:03-6892-4074',
-              'lazy' => false
-            ];
-            include 'parts/common/picture.php';
-            ?>
+          <a class="p-mv__button c-button-gradient" href="tel:03-6892-4074">
+            <img src="assets/images/text_tel.svg" alt="tel:03-6892-4074" width="272" height="32">
           </a>
         </li>
         <li class="p-mv__button-item">
-          <a href="#contact-section">
-            <?php
-            $args = [
-              'sp' => false,
-              'directory' => '',
-              'file' => 'mv_button_mail',
-              'type' => 'png',
-              'width' => 628,
-              'height' => 159,
-              'alt' => 'お問い合わせ',
-              'lazy' => false
-            ];
-            include 'parts/common/picture.php';
-            ?>
+          <a class="p-mv__button c-button-gradient" href="#contact-section">
+            <img src="assets/images/text_contact.svg" alt="お問い合わせ" width="272" height="32">
           </a>
         </li>
       </ul>

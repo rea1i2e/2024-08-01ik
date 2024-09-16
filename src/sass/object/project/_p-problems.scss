@@ -27,11 +27,16 @@
   left: 0;
   background-image: url(../images/probrems_illust_left_sp.svg);
   @include mq() {
+    top: rem2(36);
+    left: calc(50% - rem2(858));
+    width: rem2(206);
+    aspect-ratio: 20616/44207;
+    background-image: url(../images/probrems_illust_left.svg);
+  }
+  @include mq(lg) {
     top: vwl(36);
     left: calc(50% - vwl(858));
     width: vwl(206);
-    aspect-ratio: 20616/44207;
-    background-image: url(../images/probrems_illust_left.svg);
   }
 }
 
@@ -42,13 +47,17 @@
   background-image: url(../images/probrems_illust_right_sp.webp);
   background-image: url(../images/probrems_illust_right_sp.png);
   @include mq() {
+    top: rem2(58);
+    right: calc(50% - rem2(824));
+    width: rem2(168);
+    aspect-ratio: 168/428;
+    background-image: url(../images/probrems_illust_right.webp);
+    background-image: url(../images/probrems_illust_right.png);
+  }
+  @include mq(lg) {
     top: vwl(58);
     right: calc(50% - vwl(824));
     width: vwl(168);
-    aspect-ratio: 168/428;
-
-    background-image: url(../images/probrems_illust_right.webp);
-    background-image: url(../images/probrems_illust_right.png);
   }
 }
 
@@ -62,6 +71,9 @@
   word-break: keep-all;
   overflow-wrap: anywhere;
   @include mq() {
+    font-size: rem2(54);
+  }
+  @include mq(lg) {
     font-size: vwl(54);
   }
 }
@@ -70,6 +82,9 @@
   margin-block: var(--leading-trim);
   font-size: maxrem(33);
   @include mq() {
+    font-size: rem2(54);
+  }
+  @include mq(lg) {
     font-size: vwl(54);
   }
 }
@@ -82,6 +97,9 @@
   letter-spacing: 0.06em;
   line-height: 1.6;
   @include mq() {
+    font-size: rem2(70);
+  }
+  @include mq(lg) {
     font-size: vwl(70);
   }
 }
@@ -96,13 +114,16 @@
   left: 50%;
   transform: translateX(-50%);
   display: block;
-  width: vwl(7);
+  width: rem2(7);
   height: auto;
   aspect-ratio: 1/1;
   background-color: $blue;
   border-radius: 50%;
   content: "";
   @include mq() {
+    width: rem2(14);
+  }
+  @include mq(lg) {
     width: vwl(14);
   }
 }
@@ -113,9 +134,14 @@
   grid-template-columns: repeat(1, 1fr);
   gap: rem(12);
   @include mq() {
-    margin-top: vwl(52);
+    margin-top: rem2(52);
     margin-inline: auto;
     grid-template-columns: repeat(3, 1fr);
+    gap: rem2(27);
+    max-width: rem2(1200);
+  }
+  @include mq(lg) {
+    margin-top: vwl(52);
     gap: vwl(27);
     max-width: vwl(1200);
   }
@@ -134,6 +160,11 @@
   flex-shrink: 0;
   width: rem(106);
   @include mq() {
+    margin-top: rem2(38);
+    margin-left: rem2(-30);
+  }
+  @include mq(lg) {
+    width: vwl(106);
     margin-top: vwl(38);
     margin-left: vwl(-30);
   }
@@ -141,18 +172,27 @@
 
 .p-problems__item:nth-child(1) .p-problems__item-image {
   @include mq() {
+    width: rem2(215);
+  }
+  @include mq(lg) {
     width: vwl(215);
   }
 }
 
 .p-problems__item:nth-child(2) .p-problems__item-image {
   @include mq() {
+    width: rem2(206);
+  }
+  @include mq(lg) {
     width: vwl(206);
   }
 }
 
 .p-problems__item:nth-child(3) .p-problems__item-image {
   @include mq() {
+    width: rem2(192);
+  }
+  @include mq(lg) {
     width: vwl(192);
   }
 }
@@ -205,6 +245,10 @@
   text-align: center;
   @include mq() {
     aspect-ratio: 382 / 195;
+    font-size: rem2(18);
+  }
+  @include mq(lg) {
+    aspect-ratio: 382 / 195;
     font-size: vwl(18);
   }
 }
@@ -215,8 +259,11 @@
   background-image: url(../images/problems_comment_container_sp.svg);
   @include mq() {
     margin-left: 0;
-    padding: vwl(16) vwl(16) vwl(46);
+    padding: rem2(16) rem2(16) rem2(46);
     background-image: url(../images/problems_comment_container.svg);
+  }
+  @include mq(lg) {
+    padding: vwl(16) vwl(16) vwl(46);
   }
 }
 
@@ -227,8 +274,11 @@
   background-image: url(../images/problems_comment_container2_sp.svg);
   @include mq() {
     margin-right: 0;
-    padding: vwl(16) vwl(16) vwl(46);
+    padding: rem2(16) rem2(16) rem2(46);
     background-image: url(../images/problems_comment_container.svg);
+  }
+  @include mq(lg) {
+    padding: vwl(16) vwl(16) vwl(46);
   }
 }
 
@@ -240,6 +290,9 @@
   font-style: normal;
   font-size: maxrem(13.5);
   @include mq() {
+    font-size: rem2(20);
+  }
+  @include mq(lg) {
     font-size: vwl(20);
   }
 }

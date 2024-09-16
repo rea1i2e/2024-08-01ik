@@ -19,11 +19,11 @@
 }
 
 @function vwl($size) {
-	@return math.div($size, 1920) * 100vw;
+	@return min(math.div($size, 1720) * 100vw, math.div($size, 16) * 1rem);
 }
 
-@function vwl2($size) {
-	@return math.div($size, 1420) * 100vw;
+@function rem2($size) {
+	@return math.div($size, 16 * 1920) * 1rem * 1250;
 }
 
 // remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）

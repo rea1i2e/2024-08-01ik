@@ -1,0 +1,67 @@
+@use 'global' as *;
+
+.c-button-gradient {
+  position: relative;
+  z-index: 0;
+  color: #fff;
+  font-size: maxrem(17);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(274);
+  height: rem(69);
+  border-radius: 100vh;
+  background-image: linear-gradient(#ff9b3f, #fd7a00);
+  outline: 1px solid #fff;
+  outline-offset: rem(-5);
+  @include mq() {
+    width: rem(420);
+    height: rem(106);
+    font-size: maxrem(26);
+    outline-offset: rem(-8);
+  }
+}
+
+.c-button-gradient::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, #FF6F3F 0%, #FD2600 100%);
+  opacity: 0;
+  transition: opacity 0.5s;
+  border-radius: 100vh;
+}
+
+.c-button-gradient::after {
+  position: absolute;
+  top: 50%;
+  right: rem(24);
+  transform: translateY(-50%);
+  width: rem(7);
+  height: auto;
+  aspect-ratio: 11/ 16;
+  background: url(../images/arrow_right.svg) no-repeat center / contain;
+  content: "";
+  @include mq() {
+    right: rem(37);
+    width: rem(11);
+  }
+}
+
+/* フォーカスされている要素を明確に示 */
+.c-button-gradient:focus-visible,
+.c-button-gradient:focus-visible::before {
+  opacity: 1;
+}
+
+/* 入力デバイスのいずれかにhoverに対応している入力デバイスが含まれる場合に適用 */
+@media (any-hover: hover) {
+  .c-button-gradient:hover,
+  .c-button-gradient:hover::before {
+    opacity: 1;
+  }
+}

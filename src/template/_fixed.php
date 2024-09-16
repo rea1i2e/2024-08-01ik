@@ -1,41 +1,13 @@
-<div class="p-fixed l-fixed">
+<div class="p-fixed l-fixed" id="js-fixed-button">
   <ul class="p-fixed__button-items">
     <li class="p-fixed__button-item">
-      <a href="#contact-section">
-        <?php
-      $args = [
-        'sp' => true,
-        'directory' => '',
-        'file' => 'fixed_button_mail',
-        'type' => 'png',
-        'width' => 600,
-        'height' => 128,
-        'spWidth' => 380,
-        'spHeight' => 106,
-        'alt' => 'お問い合わせ',
-        'lazy' => true
-      ];
-      include 'parts/common/picture.php';
-      ?>
-      </a>
-    </li>
-        <li class="p-fixed__button-item">
-      <a href="tel:03-6892-4074">
-      <?php
-      $args = [
-        'sp' => true,
-        'directory' => '',
-        'file' => 'fixed_button_tel',
-        'type' => 'png',
-        'width' => 600,
-        'height' => 128,
-        'spWidth' => 380,
-        'spHeight' => 106,
-        'alt' => 'tel:03-6892-4074',
-        'lazy' => true
-      ];
-      include 'parts/common/picture.php';
-      ?>
+      <a class="p-fixed__button" href="#contact-section">
+      <img src="assets/images/text_contact.svg" alt="お問い合わせ" width="272" height="32">
+        </a>
+      </li>
+      <li class="p-fixed__button-item">
+        <a class="p-fixed__button" href="tel:03-6892-4074">
+        <img src="assets/images/text_tel.svg" alt="tel:03-6892-4074" width="272" height="32">
       </a>
     </li>
   </ul>

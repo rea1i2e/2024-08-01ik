@@ -10,12 +10,14 @@
   max-width: 100%;
   padding: rem(20);
   background-color: $blue;
+  border: 2px solid $blue;
   border-radius: 100vh;
   color: #fff;
   font-size: maxrem(13);
   font-weight: 700;
   letter-spacing: 0.06em;
   line-height: 1;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   @include mq() {
     width: rem(240);
     font-size: maxrem(14);
@@ -27,8 +29,12 @@
   width: rem(11);
   height: auto;
   aspect-ratio: 1 / 1;
-  background: url(../images/icon_external.svg) no-repeat center / contain;
+  mask: url(../images/icon_external.svg) no-repeat center / contain;
+  background-color: #fff;;
+
   content: "";
+  transition: background-color 0.3s ease-in-out;
+
 }
 
 .c-button--2::after {
@@ -54,9 +60,27 @@
   width: rem(11);
   height: auto;
   aspect-ratio: 11 / 16;
-  background: url(../images/arrow_right.svg) no-repeat center / contain;
+  mask: url(../images/arrow_right.svg) no-repeat center / contain;
   content: "";
   @include mq() {
     right: rem(28);
+  }
+}
+
+/* フォーカスされている要素を明確に示 */
+:focus-visible {
+}
+
+/* 入力デバイスのいずれかにhoverに対応している入力デバイスが含まれる場合に適用 */
+@media (any-hover: hover) {
+  .c-button:hover {
+    opacity: 1;
+  }
+  .c-button:hover {
+    color: $blue;
+    background-color: #fff;
+  }
+  .c-button:hover::after {
+    background-color: $blue;
   }
 }

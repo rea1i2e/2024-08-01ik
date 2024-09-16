@@ -38,6 +38,7 @@
   height: auto;
   aspect-ratio: 440 / 270;
   object-fit: cover;
+  background-color: #fff;
   box-shadow: 0 0 rem(10) 0 rgba(#8EA8D8, 0.25);
   border-radius: rem(10);
   @include mq() {

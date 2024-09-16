@@ -1,43 +1,22 @@
 /* リキッドレイアウト対応 */
 @use "global" as *;
 
-@if $startFrom == sp {
-  //スマホファースト
-  html {
-        //375px~767px
-        font-size: 16px;
-    //~375px
-    @media (max-width: 375px) {
-      font-size: vw(375, 16);
-    }
-
-    @include mq("md") {
-      font-size: vw($inner-pc + $padding-pc * 2, 16);
-    }
-
-    //inner~max-screen
-    @media (min-width: #{$inner-pc + $padding-pc * 2}px) {
-      font-size: 16px;
-    }
+html {
+  //375px~767px
+  font-size: 16px;
+  //~375px
+  @media (max-width: 375px) {
+    font-size: vw(375, 16);
   }
-} @else {
-  //PCファースト
-  html {
-    font-size: 16px;
 
-    @media (max-width: #{$inner-pc + $padding-pc * 2}px) {
-      font-size: vw($inner-pc + $padding-pc * 2, 16);
-    }
+  // @include mq("md") {
+  //   font-size: vw($inner-pc + $padding-pc * 2, 16);
+  // }
 
-    @include mq("md") {
-      font-size: 16px;
-    }
-
-    //~375px
-    @media (max-width: 375px) {
-      font-size: vw(375, 16);
-    }
-  }
+  //inner~max-screen
+  // @media (min-width: #{$inner-pc + $padding-pc * 2}px) {
+  //   font-size: 16px;
+  // }
 }
 
 /* pcの電話番号発信対応 */
@@ -69,7 +48,7 @@ a:focus-visible {
 
 /* 入力デバイスのいずれかにhoverに対応している入力デバイスが含まれる場合に適用 */
 @media (any-hover: hover) {
-  a:active {
+  a:hover {
     opacity: 0.7;
   }
 }
@@ -80,9 +59,8 @@ a:focus-visible {
 
 html {
   scroll-behavior: smooth;
+  min-width: rem($inner-pc + $padding-pc * 2);
 }
-
-
 
 body {
   display: flex;
@@ -93,6 +71,7 @@ body {
   line-height: 1.5;
   background: url(../images/bg_sp.webp) repeat-y top / 100%;
   background-image: url(../images/bg_sp.png);
+  min-width: rem($inner-pc + $padding-pc * 2);
 }
 
 main {

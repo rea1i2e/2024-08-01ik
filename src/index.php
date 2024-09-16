@@ -20,6 +20,7 @@ require_once UTIL_DIR . '/common.php';
     <?php include(TEMPLATE_DIR . '/_faq.php'); ?>
     <?php include(TEMPLATE_DIR . '/_domestic.php'); ?>
   <?php include(TEMPLATE_DIR . '/_contact.php'); ?>
+  <?php include(TEMPLATE_DIR . '/_thanks-content.php'); ?>
 </main>
 <?php include(TEMPLATE_DIR.'/_fixed.php'); ?>
 <?php include(TEMPLATE_DIR . '/_footer.php'); ?>
