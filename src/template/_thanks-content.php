@@ -15,7 +15,7 @@
       </p>
     </div>
     <div class="p-thanks-content__button">
-      <a class="c-button c-button--arrow" href="/">ホームへ戻る</a>
+      <a class="c-button c-button--arrow" href="./">ホームへ戻る</a>
     </div>
   </div>
 </main>
