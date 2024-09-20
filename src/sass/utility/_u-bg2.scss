@@ -6,4 +6,8 @@
   z-index: -1;
   background: url(../images/bg_sp.webp) repeat-y top / 100%;
   background-image: url(../images/bg_sp.png);
+  @include mq() {
+    background-image: url(../images/bg.webp);
+    background-image: url(../images/bg.png);
+  }
 }

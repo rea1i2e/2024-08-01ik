@@ -10,7 +10,7 @@
         </div>
       </div>
       <figure class="p-domestic__illust">
-        <img src="assets/images/img_woman2.svg" alt="イラスト：電話対応する女性" width="140" height="110">
+        <img src="assets/images/img_woman2.svg" alt="イラスト：薬剤師" width="140" height="110">
       </figure>
     </div>
     <div class="p-domestic__copy">

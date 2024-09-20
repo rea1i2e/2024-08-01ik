@@ -9,7 +9,8 @@
   width: 100%;
   height: auto;
   aspect-ratio: 1920/100;
-  background: url(../images/service_bg_round.svg) no-repeat center / cover;
+  background: url(../images/service_bg_round.webp) no-repeat center / cover;
+  background-image: url(../images/service_bg_round.png);
   content: "";
 }
 
@@ -22,6 +23,7 @@
   aspect-ratio: 769/557;
   background: url(../images/service_texture_left2_sp.svg) no-repeat center / contain;
   content: "";
+  pointer-events: none;
   @include mq() {
     left: vwl(-8);
     height: auto;
@@ -276,6 +278,7 @@
   text-align: center;
   background-image: linear-gradient(0deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px)),
     linear-gradient(90deg, #fff calc(100% - 1px), rgba(0, 0, 0, 0.04) calc(100% - 1px));
+    background-image: url(../images/pattern.svg);
   background-size: rem(13) rem(13);
   background-repeat: repeat;
   background-position: top center;

@@ -29,7 +29,10 @@
   width: rem(11);
   height: auto;
   aspect-ratio: 1 / 1;
-  mask: url(../images/icon_external.svg) no-repeat center / contain;
+  mask-image: url(../images/icon_external.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   background-color: #fff;;
 
   content: "";
@@ -60,7 +63,10 @@
   width: rem(11);
   height: auto;
   aspect-ratio: 11 / 16;
-  mask: url(../images/arrow_right.svg) no-repeat center / contain;
+  mask-image: url(../images/arrow_right.svg);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
   content: "";
   @include mq() {
     right: rem(28);

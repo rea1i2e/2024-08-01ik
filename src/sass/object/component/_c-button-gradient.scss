@@ -17,10 +17,12 @@
   background-image: linear-gradient(#ff9b3f, #fd7a00);
   outline: 1px solid #fff;
   outline-offset: rem(-5);
+  box-shadow: 0 0 rem(15) 0 rgba(#005477, 0.2);
   @include mq() {
     width: rem(420);
     height: rem(106);
     font-size: maxrem(26);
+    box-shadow: 0 0 rem(30) 0 rgba(#005477, 0.2);
     outline-offset: rem(-8);
   }
 }

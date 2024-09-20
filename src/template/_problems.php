@@ -7,7 +7,7 @@
     $problems = [
         [
             'image' => 'assets/images/problems_human_01.svg',
-            'alt' => 'イラスト：お悩みを抱えた女性',
+            'alt' => 'イラスト：お悩みを抱えた人',
             'text' => 'ドーピング禁止物質の検査したいが<br /><em class="p-problems__items-text-em">どこに問い合わせしたらいいか<br />わからない…</em>',
             'width_sp' => '201',
             'height_sp' => '190',
@@ -16,7 +16,7 @@
         ],
         [
             'image' => 'assets/images/problems_human_02.svg',
-            'alt' => 'イラスト：お悩みを抱えた女性',
+            'alt' => 'イラスト：お悩みを抱えた人',
             'text' => '陽性反応が出たものの<br /><em class="p-problems__items-text-em">原因が特定できずに困っている…</em>',
             'width_sp' => '201',
             'height_sp' => '190',
@@ -25,7 +25,7 @@
         ],
         [
             'image' => 'assets/images/problems_human_03.svg',
-            'alt' => 'イラスト：お悩みを抱えた女性',
+            'alt' => 'イラスト：お悩みを抱えた人',
             'text' => '海外の分析機関による<br /><em class="p-problems__items-text-em">英語での返答がわかりにくい…</em>',
             'width_sp' => '201',
             'height_sp' => '190',

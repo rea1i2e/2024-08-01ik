@@ -255,6 +255,13 @@
     margin-top: rem(47);
   }
 }
+
+.p-form__button .c-button-gradient {
+  box-shadow: 0 rem(10) rem(20) 0 #f0f1f2;
+  @include mq() {
+    box-shadow: 0 rem(5) rem(10) 0 #f0f1f2;
+  }
+}
 .error-message {
   color: red;
 }
