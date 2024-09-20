@@ -43,20 +43,6 @@ $mailConfig = array(
 ■ お問い合わせ内容
 [message]
 
-■ utm_source
-[utm_source]
-
-■ utm_medium
-[utm_medium]
-
-■ utm_term
-[utm_term]
-
-■ utm_content
-[utm_content]
-
-■ utm_campaign
-[utm_campaign]
 
 
 -------------------------------------------------
@@ -132,21 +118,6 @@ $htmlMailConfig = array(
 <br>
 ■ お問い合わせ内容<br>
 [message]<br>
-<br>
-■ utm_source<br>
-[utm_source]<br>
-<br>
-■ utm_medium<br>
-[utm_medium]<br>
-<br>
-■ utm_term<br>
-[utm_term]<br>
-<br>
-■ utm_content<br>
-[utm_content]<br>
-<br>
-■ utm_campaign<br>
-[utm_campaign]<br>
 <br>
 <br>
 -------------------------------------------------
