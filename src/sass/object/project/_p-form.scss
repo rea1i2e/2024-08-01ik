@@ -135,7 +135,7 @@
 }
 
 .p-form__privacy-inner {
-  height: rem(158);
+  // height: rem(158);
   padding-right: rem(5);
   overflow-y: auto;
   // scrollbar-color: #DFDFDF #fff; // Firefox対応
@@ -166,6 +166,27 @@
   @include mq() {
     font-size: maxrem(14);
   }
+}
+
+.p-form__privacy-text ol {
+  margin-top: 1em;
+  padding-left: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.p-form__privacy-text li {
+  padding-left: rem(16);
+  text-indent: rem(-25);
+  @include mq() {
+    padding-left: rem(16);
+    text-indent: rem(-30);
+  }
+}
+
+.p-form__privacy-text h4 {
+  margin-top: 1em;
 }
 
 .p-form__acceptance {
@@ -263,5 +284,10 @@
   }
 }
 .error-message {
+  margin-bottom: rem(11);
+
   color: red;
+  font-size: maxrem(13);
+  font-weight: 700;
+  letter-spacing: 0.06em;
 }

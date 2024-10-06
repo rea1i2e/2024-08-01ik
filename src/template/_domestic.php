@@ -15,10 +15,21 @@
     </div>
     <div class="p-domestic__copy">
       <p class="c-copy">
-        <picture>
-          <source srcset="assets/images/copy_sp.svg" width="888" height="213" media="(max-width: 767px)">
-          <img src="assets/images/copy.svg" alt="サプリメント・飲料水・化粧品のアンチ・ドーピング対策なら実績多数のイルホープにお任せ下さい！" width="564" height="104">
-        </picture>
+        <?php
+        $args = [
+          'sp' => true,
+          'directory' => '',
+          'file' => 'copy',
+          'type' => 'jpg',
+          'width' => 1200,
+          'height' => 177,
+          'spWidth' => 688,
+          'spHeight' => 386,
+          'alt' => 'サプリメント・飲料水・化粧品のアンチ・ドーピング対策なら実績多数のイルホープにお任せ下さい！',
+          'lazy' => false
+        ];
+        include 'parts/common/picture.php';
+        ?>
       </p>
     </div>
   </div>

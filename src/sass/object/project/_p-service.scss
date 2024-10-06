@@ -134,7 +134,7 @@
 }
 
 .p-service__copy2::before {
-  --icon-size: #{rem(12)}; // アイコンの高さ
+  --icon-size: #{rem(14)}; // アイコンの高さ
   margin-block: calc((1lh - var(--icon-size)) / 2);
   block-size: var(--icon-size);
   aspect-ratio: 1/1;
