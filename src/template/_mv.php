@@ -3,7 +3,8 @@
     <h1 class="p-mv__heading">
       <picture>
         <source srcset="assets/images/mv_logo.svg" width="148" height="24" media="(min-width: 768px)">
-        <img src="assets/images/mv_logo_sp.svg" alt="イルホープ" width="688" height="120">
+        <source srcset="assets/images/mv_logo_sp.webp" width="688" height="116">
+        <img src="assets/images/mv_logo_sp.png" alt="イルホープ" width="688" height="116">
       </picture>
     </h1>
     <div class="p-mv__content">

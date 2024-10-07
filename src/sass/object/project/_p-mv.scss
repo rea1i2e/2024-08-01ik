@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .p-mv {
-  padding-block: rem(30) rem(43);
+  padding-block: rem(32) rem(43);
   background: url(../images/mv_bg_sp.webp) no-repeat bottom / cover;
   background-image: url(../images/mv_bg_sp.png);
   @include mq() {
@@ -29,7 +29,7 @@
 .p-mv__heading img {
   width: 100%;
   height: auto;
-  aspect-ratio: 688 / 120;
+  aspect-ratio: 688 / 116;
   object-fit: contain;
   @include mq() {
     aspect-ratio: 178 / 24;
@@ -37,7 +37,7 @@
 }
 
 .p-mv__content {
-  margin-top: rem(12);
+  margin-top: rem(14);
   @include mq() {
     position: relative;
     margin-top: rem(52);
