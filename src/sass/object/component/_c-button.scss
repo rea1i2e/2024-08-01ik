@@ -42,7 +42,6 @@
 
 .c-button--2::after {
   transform: translate(rem(13), rem(1));
-  transform: translateX(rem(13));
   @include mq() {
   }
 }

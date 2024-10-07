@@ -135,7 +135,7 @@
 }
 
 .p-form__privacy-inner {
-  // height: rem(158);
+  height: rem(158);
   padding-right: rem(5);
   overflow-y: auto;
   // scrollbar-color: #DFDFDF #fff; // Firefox対応
@@ -166,6 +166,15 @@
   @include mq() {
     font-size: maxrem(14);
   }
+}
+
+.p-form__privacy-text h3 {
+  text-align: center;
+}
+
+.p-form__privacy-text h3 + p {
+  margin-top: 1em;
+  
 }
 
 .p-form__privacy-text ol {
@@ -285,7 +294,6 @@
 }
 .error-message {
   margin-bottom: rem(11);
-
   color: red;
   font-size: maxrem(13);
   font-weight: 700;
