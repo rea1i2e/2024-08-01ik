@@ -20,7 +20,7 @@
           'sp' => true,
           'directory' => '',
           'file' => 'copy',
-          'type' => 'jpg',
+          'type' => 'png',
           'width' => 1200,
           'height' => 177,
           'spWidth' => 688,
